@@ -12,34 +12,54 @@ function getComputerChoice(){
 
 
 
-function playRound(playerSelection, computerSelection){
-  if (playerSelection === 'rock' && computerSelection === 'rock'){
-    return 'Tie! You both chose rock';
+let playRound = (playerSelection, computerSelection) =>{
+  let score = "";
+    if (playerSelection === 'rock' && computerSelection === 'rock'){
+      score = "Tie! You both chose rock";
     } else if(playerSelection === 'rock' && computerSelection === 'paper'){
-    return 'You loose! Paper beats rock';
+      score = "You loose! Paper beats rock";
     } else if (playerSelection === 'rock' && computerSelection === 'scissors'){
-    return 'You win! Rock beats scissors';
+      score = "You win! Rock beats scissors";
     } else if (playerSelection === 'paper' && computerSelection === 'paper'){
-    return 'Tie! You both chose paper'
+      score = "Tie! You both chose paper"
     } else if (playerSelection === 'paper' && computerSelection === 'rock'){
-    return 'You win! Paper beats rock'
+      score = "You win! Paper beats rock"
     } else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-    return 'You loose! Scissors beats paper';
+      score = "You loose! Scissors beats paper";
     } else if (playerSelection === 'scissors' && computerSelection === 'scissors'){
-    return 'Tie! You both chose scissors';
+      score = "Tie! You both chose scissors";
     } else if (playerSelection === 'scissors' && computerSelection === 'paper'){
-    return 'You win! Scissors beats paper';
+      score = "You win! Scissors beats paper";
     } else if (playerSelection === 'scissors' && computerSelection === 'rock'){
-    return 'You loose! Rock beats scissors';
-    } else return 'Choose between rock, paper or scissors';
-  
+      score = "You loose! Rock beats scissors";
+    } else score = "Choose between rock, paper or scissors";
+    
+    return console.log(score);
 };
 
-let playerSelection = prompt('what will you play?');
-const computerSelection = getComputerChoice();
 
-console.log(playerSelection);
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
 
-function game
+
+
+
+  let i = 0;
+  while (i < 5){
+    const playerSelection = prompt('what will you play?');
+    const computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+    i++;
+  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
