@@ -59,24 +59,17 @@ function playRound(playerSelection, computerSelection) {
       playerSelection = prompt('rock, paper, or scissors?');
       playRound(playerSelection, computerSelection);
       console.log('Player score: ', playerScore, 'Computer score: ', computerScore, score);
-    }
-  };
-
-  function winGame (playerScore, computerScore){
-    let winningScore = 3;
-    if (playerScore === winningScore){
-      alert("You won the game!");
-    } else {
-      alert("You lost the game!");
-    };
-  };
+    } 
+      let winningScore = 3;
+      if (playerScore === winningScore){
+        alert("You won the game!");
+      } else {
+        alert("You lost the game!");
+      };
     
-
-
-  
-
+  };
 playGame();
-winGame();
+
 
 
 
