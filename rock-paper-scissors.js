@@ -1,4 +1,3 @@
-//make a function that will randomly return rock, paper, or scissors from the computer//
 function getComputerChoice(){
   let randomNumber = Math.floor((Math.random() * 4));
   if (randomNumber === 0){
@@ -43,16 +42,6 @@ function playRound(playerSelection, computerSelection) {
     } else return "Choose between rock, paper or scissors";
    }
 
-  
-/*/
-  let i = 0; 
-  while (i < 5){
-   
-    playRound(playerSelection, computerSelection);
-    i++;
-    console.log('Player score: ', playerScore, 'Computer score: ', computerScore, score);
-  };
- /*/
   function playGame() {
     for (let i = 0; i < 5; i++){
       computerSelection = getComputerChoice();
