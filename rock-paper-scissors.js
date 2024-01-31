@@ -1,6 +1,6 @@
 //make a function that will randomly return rock, paper, or scissors from the computer//
-let randomNumber = Math.floor((Math.random() * 4));
 function getComputerChoice(){
+  let randomNumber = Math.floor((Math.random() * 4));
   if (randomNumber === 0){
     return 'rock';
   } else if(randomNumber === 1){
@@ -11,8 +11,6 @@ function getComputerChoice(){
 };
 
 
-
-console.log(getComputerChoice());
 let playerScore = 0;
 let computerScore = 0;
 let score = "";
@@ -43,34 +41,43 @@ function playRound(playerSelection, computerSelection) {
       computerScore += 1;
       return score = "You lost! Rock beats scissors";
     } else return "Choose between rock, paper or scissors";
+   }
 
-
-};
-
+  
+/*/
   let i = 0; 
   while (i < 5){
-    let playerSelection = prompt('what will you play?');
-    let computerSelection = getComputerChoice();
+   
     playRound(playerSelection, computerSelection);
     i++;
     console.log('Player score: ', playerScore, 'Computer score: ', computerScore, score);
   };
- 
-  function playGame(playerScore, computerScore) {
+ /*/
+  function playGame() {
+    for (let i = 0; i < 5; i++){
+      computerSelection = getComputerChoice();
+      playerSelection = prompt('rock, paper, or scissors?');
+      playRound(playerSelection, computerSelection);
+      console.log('Player score: ', playerScore, 'Computer score: ', computerScore, score);
+    }
+  };
+
+  function winGame (playerScore, computerScore){
     let winningScore = 3;
     if (playerScore === winningScore){
       alert("You won the game!");
     } else {
       alert("You lost the game!");
     };
- 
+  };
     
 
-  };
 
   
 
 playGame();
+winGame();
+
 
 
 
