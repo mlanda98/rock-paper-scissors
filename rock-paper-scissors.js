@@ -76,9 +76,14 @@ function playRound(playerSelection, computerSelection) {
     } else  if (playerSelection === 'scissors' && computerSelection === 'rock'){
       computerWin();
     }
+
+    if (playerScore === 5){
+      alert("You won!");
+    } else if (computerScore === 5){
+      alert("You lost!");
+    }
   };
 
-   
    
  
 
