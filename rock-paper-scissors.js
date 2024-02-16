@@ -81,7 +81,7 @@ function playRound(playerSelection, computerSelection) {
       alert("You won!");
     } else if (computerScore === 5){
       alert("You lost!");
-    }
+    };
   };
 
    
